@@ -1,0 +1,11 @@
+{
+  "entries": [],
+  "budget": [
+    {"id":"houston","icon":"✈️","name":"Round-trip flights · Houston ↔ SF","desc":"Houston, TX — San Francisco, CA","amount":350},
+    {"id":"daytona","icon":"🛫","name":"Round-trip flights · Daytona ↔ SF","desc":"Daytona Beach, FL — San Francisco, CA","amount":450},
+    {"id":"hotel","icon":"🏨","name":"Hotel / Accommodation","desc":"A cozy place to stay","amount":650},
+    {"id":"car","icon":"🚙","name":"Rental car","desc":"Exploring the Bay Area","amount":350},
+    {"id":"food","icon":"🍜","name":"Food & drinks","desc":"Meals, cafes, treats","amount":400},
+    {"id":"activities","icon":"🎡","name":"Activities & experiences","desc":"Sightseeing, attractions, memories","amount":300}
+  ]
+}
