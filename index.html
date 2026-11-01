@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f4ef" />
+  <title>Our Little Getaway — San Francisco Fund</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <a href="#overview" class="brand" aria-label="Our Little Getaway"><span class="brand-icon">✳</span><span>our little <em>getaway</em></span></a>
+      <div class="header-right"><span class="trip-pill"><span class="pill-dot"></span> SAN FRANCISCO, CA</span><button id="signoutBtn" class="subtle-btn hidden">Đăng xuất</button></div>
+    </header>
+    <nav class="nav" aria-label="Trang"><a class="nav-link active" href="#overview" data-page="overview">✧ &nbsp; Overview</a><a class="nav-link" href="#details" data-page="details">▤ &nbsp; Contributions</a></nav>
+    <div id="demoBanner" class="demo-banner">CHẾ ĐỘ DEMO · Dữ liệu hiện chỉ lưu trên trình duyệt này. Xem README để bật đồng bộ cho hai người.</div>
+    <main id="overviewPage" class="page">
+      <div class="page-heading"><div><div class="eyebrow">OUR NEXT ADVENTURE / 2027</div><h1>Saving for <em>San Francisco.</em></h1><p>A little closer to our getaway, one dollar at a time. ♡</p></div><div class="stamp">✈<span>HOUSTON + DAYTONA<br/>→ SAN FRANCISCO</span></div></div>
+      <section class="map-panel" aria-label="Bản đồ chuyến bay đến San Francisco">
+        <div class="map-head"><span>✧ THE JOURNEY</span><span>WEST COAST BOUND &nbsp; ↗</span></div>
+        <svg class="map-svg" viewBox="0 0 1000 335" role="img" aria-label="Đường bay từ Houston và Daytona Beach đến San Francisco" preserveAspectRatio="xMidYMid meet">
+          <defs><pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#d1dcd7" stroke-width=".8"/></pattern></defs>
+          <rect width="1000" height="335" fill="url(#grid)" opacity=".48"/>
+          <path class="land" d="M96 30 L186 42 232 67 268 86 299 108 331 114 369 126 400 145 453 139 491 150 525 162 564 173 584 189 619 197 652 190 681 205 721 204 747 192 769 185 784 173 798 160 833 155 846 179 835 213 851 231 831 244 823 266 791 260 773 243 733 254 702 242 674 257 638 251 621 277 582 271 565 290 524 276 483 277 443 258 404 249 372 265 346 243 307 232 280 209 253 188 227 180 214 159 192 140 179 109 160 105 143 90 127 72Z"/>
+          <path class="coast" d="M96 30 L186 42 232 67 268 86 299 108 331 114 369 126 400 145 453 139 491 150 525 162 564 173 584 189 619 197 652 190 681 205 721 204 747 192 769 185 784 173 798 160 833 155 846 179 835 213 851 231 831 244 823 266 791 260 773 243 733 254 702 242 674 257 638 251 621 277 582 271 565 290 524 276 483 277 443 258 404 249 372 265 346 243 307 232 280 209 253 188 227 180 214 159 192 140 179 109 160 105 143 90 127 72Z"/>
+          <path id="routeHouston" class="flight-route" d="M614 233 Q430 50 188 147"/>
+          <path class="flight-route secondary" d="M814 213 Q530 -5 188 147"/>
+          <circle cx="188" cy="147" r="14" class="destination-halo"/><circle cx="188" cy="147" r="5.5" class="destination-dot"/>
+          <circle cx="614" cy="233" r="5" class="origin-dot"/><circle cx="814" cy="213" r="5" class="origin-dot"/>
+          <g class="plane"><path d="M-22 0 L-5 -4 1 -23 7 -24 9 -4 24 1 24 6 9 8 4 19 0 20 -5 8 -20 10 Z" fill="#244e49" stroke="#f6f4ef" stroke-width="2"/><animateMotion dur="9s" repeatCount="indefinite" rotate="auto" keyPoints="0;1" keyTimes="0;1"><mpath href="#routeHouston"/></animateMotion></g>
+          <text x="148" y="115" class="map-city strong">SAN FRANCISCO</text><text x="148" y="129" class="map-city">CALIFORNIA</text>
+          <text x="624" y="227" class="map-city strong">HOUSTON</text><text x="624" y="241" class="map-city">TEXAS</text>
+          <text x="756" y="194" class="map-city strong">DAYTONA BEACH</text><text x="781" y="207" class="map-city">FLORIDA</text>
+          <text x="62" y="275" class="ocean-label">PACIFIC OCEAN</text><text x="439" y="93" class="ocean-label">UNITED STATES</text>
+        </svg>
+        <div class="map-footer"><span><span class="legend-dot destination"></span> Destination</span><span><span class="legend-dot origin"></span> Departures</span><span class="map-caption">TWO STARTING POINTS, ONE DESTINATION ♡</span></div>
+      </section>
+      <section class="progress-section"><div class="section-top"><div><div class="eyebrow">THE SAVINGS JOURNEY</div><h2>Our travel fund</h2></div><strong class="progress-percent" id="progressPercent">0%</strong></div><div class="progress-track"><div id="progressFill" class="progress-fill"></div></div><div class="amount-row"><div><span class="small-label">SAVED SO FAR</span><div class="saved-amount" id="currentAmount">$0.00</div></div><div class="goal-text">of <strong id="targetAmount">$0.00</strong> goal</div></div><p class="progress-note" id="progressNote">Every dollar gets us closer. ✨</p></section>
+      <section class="budget-section"><div class="section-top"><div><div class="eyebrow">TRIP PLANNING</div><h2>Estimated expenses</h2></div><button id="editBudgetBtn" class="outline-btn">✎ &nbsp; Edit budget</button></div><div id="budgetList" class="budget-list"></div><div class="budget-total"><span>ESTIMATED TOTAL</span><strong id="budgetTotal">$0.00</strong></div></section>
+      <footer>MADE WITH ♡ FOR OUR SAN FRANCISCO ADVENTURE</footer>
+    </main>
+    <main id="detailsPage" class="page hidden"><div class="page-heading details-title"><div><div class="eyebrow">EVERY LITTLE CONTRIBUTION COUNTS</div><h1>Our savings <em>diary.</em></h1><p>Track every deposit and withdrawal along the way.</p></div><button id="addBtn" class="primary-btn"><span>＋</span> Add transaction</button></div><section class="stats-grid"><article class="stat"><span class="small-label">CURRENT BALANCE</span><strong id="detailBalance">$0.00</strong><span>Available for our trip</span></article><article class="stat"><span class="small-label">TOTAL DEPOSITED</span><strong id="totalDeposits">$0.00</strong><span>All contributions</span></article><article class="stat"><span class="small-label">TOTAL WITHDRAWN</span><strong id="totalWithdrawals">$0.00</strong><span>Money taken out</span></article></section><section class="history-section"><div class="section-top"><div><div class="eyebrow">OUR MONEY LOG</div><h2>Transaction history</h2></div><span id="entryCount" class="count-label">0 entries</span></div><div class="table-wrap"><table><thead><tr><th>DATE</th><th>WHO</th><th>TYPE</th><th>NOTE</th><th class="number">AMOUNT</th><th aria-label="Actions"></th></tr></thead><tbody id="transactionsBody"></tbody></table></div></section><footer>SMALL SAVINGS, BIG MEMORIES ♡</footer></main>
+  </div>
+  <div id="modalBackdrop" class="modal-backdrop hidden"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-header"><div><div class="eyebrow" id="modalEyebrow">TRAVEL FUND</div><h2 id="modalTitle">Add transaction</h2></div><button id="closeModalBtn" class="close-btn" aria-label="Close">×</button></div><div id="modalContent"></div></div></div>
+  <div id="authOverlay" class="auth-overlay hidden"><div class="auth-card"><div class="auth-icon">✈</div><div class="eyebrow">JUST THE TWO OF US</div><h2>Welcome to our <em>getaway.</em></h2><p>Sign in to see and update our shared savings.</p><form id="authForm"><label>Email<input id="authEmail" type="email" autocomplete="email" required placeholder="you@example.com" /></label><label>Password<input id="authPassword" type="password" autocomplete="current-password" required minlength="6" placeholder="••••••••" /></label><p id="authError" class="error hidden"></p><button class="primary-btn full" type="submit">Sign in →</button></form></div></div>
+  <div class="toast hidden" id="toast" role="status"></div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

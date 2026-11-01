@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Replace these TWO email addresses with the exact addresses used by your accounts.
+    function isPartner() {
+      return request.auth != null &&
+        request.auth.token.email in ['YOUR_EMAIL@gmail.com', 'PARTNER_EMAIL@gmail.com'];
+    }
+    match /trips/san-francisco {
+      allow read, write: if isPartner();
+      match /entries/{entryId} {
+        allow read, write: if isPartner();
+      }
+    }
+  }
+}
